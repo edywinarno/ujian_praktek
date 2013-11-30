@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+		 
+	<changeSet id="1" author="Edy Winarno">
+        <createTable tableName="ujian_praktek">
+            <column name="nis" type="int(10)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            
+			<column name="nama" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            
+			<column name="kelas" type="varchar(20)">
+			<constraints nullable="false"/>
+			</column>
+			
+			<column name="jurusan" type="varchar(5)">
+			<constraints nullable="false"/>
+			</column>
+			
+			<column name="jenis_kelamin" type="enum('P','L')">
+			<constraints nullable="false"/>
+			</column>
+			
+			<column name="alamat" type="text">
+			<constraints nullable="false"/>
+			</column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
